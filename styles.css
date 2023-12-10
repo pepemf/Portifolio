@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'poppins', sans-serif;
+    overflow-x: hidden;
+    background-image: url('/Assets/Images/preparing.gif');
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
+
+header{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.div__title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.div__title > h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.div__Social__buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.div__Social__buttons > a > img{
+    width: 2rem;
+    height: 2rem;
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.div__Social__buttons > a > img:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.body_text{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.body_text > p{
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0,0,0,1);
+    transition: all 0.3s ease;
+}
+
+.body_text > p:hover{
+    cursor: default;
+    text-shadow: 0 0 10px rgb(24, 68, 200);
+}
