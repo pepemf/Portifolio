@@ -10,6 +10,8 @@ Este é o meu portfólio profissional .
 - **AOS (Animate On Scroll)**
 - **Boxicons**
 
+Favicon by [Icons8](https://icons8.com/)
+
 ## Contato
 - **LinkedIn**: [JP Moco](https://www.linkedin.com/in/jpedromoco)
 - **Email**: jpedromoco@gmail.com
