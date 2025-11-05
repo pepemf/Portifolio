@@ -1,203 +1,654 @@
 <!DOCTYPE html>
-        <html lang="pt-br">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>JP Moco | Especialista em Cibersegurança</title>
-            <link rel="icon" href="favicon.png" >
-            <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-            <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-            <link rel="stylesheet" href="styles.css">
-        </head>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JP Moco | Cyber Threat Intelligence Analyst</title>
+    <meta name="description" content="José Pedro Moco - Analista de Cyber Threat Intelligence especializado em CTI, OSINT, Malware Analysis, Threat Hunting e Adversary Profiling">
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-        <body class="bg-zinc-900 text-gray-200 scroll-smooth">
-        <!-- Cabeçalho -->
-        <header class="fixed top-0 w-full bg-zinc-900/95 backdrop-blur-md py-4 px-8 flex justify-between items-center z-50 border-b border-zinc-700">
-            <h1 class="text-2xl font-bold cyber-gradient">JP Moco</h1>
-            <nav class="hidden md:flex gap-8">
-                <a href="#sobre" class="hover:text-blue-400 transition-colors">Sobre</a>
-                <a href="#expertise" class="hover:text-blue-400 transition-colors">Expertise</a>
-                <a href="#contato" class="hover:text-blue-400 transition-colors">Contato</a>
-            </nav>
-        </header>
-
-        <!-- Hero Section -->
-        <section class="min-h-screen flex items-center justify-center text-center px-4 pt-24 relative overflow-hidden">
-            <div class="hex-pattern absolute inset-0 opacity-10 z-0"></div>
-            <div class="max-w-4xl relative z-10">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6 cyber-gradient" data-aos="fade-up">
-                    Analista de Cibersegurança
+<body class="bg-zinc-900 text-gray-200 scroll-smooth">
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-zinc-900/95 backdrop-blur-md py-4 px-6 md:px-8 z-50 border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
+                    <i class='bx bx-shield-quarter text-white text-xl'></i>
+                </div>
+                <h1 class="text-2xl font-bold tracking-tight">
+                    <span class="cyber-gradient">JP Moco</span>
                 </h1>
-                <p class="text-xl md:text-2xl text-zinc-400 mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-                    Protegendo sistemas e detectando ameaças através de análise proativa e inteligência estratégica.
+            </div>
+            <nav class="hidden md:flex gap-8">
+                <a href="#about" class="hover:text-cyan-400 transition-colors font-medium">About</a>
+                <a href="#expertise" class="hover:text-cyan-400 transition-colors font-medium">Expertise</a>
+                <a href="#skills" class="hover:text-cyan-400 transition-colors font-medium">Skills</a>
+                <a href="https://medium.com/@jpedromoco" target="_blank" class="hover:text-cyan-400 transition-colors font-medium flex items-center gap-1">
+                    Blog <i class='bx bx-link-external text-sm'></i>
+                </a>
+                <a href="#contact" class="hover:text-cyan-400 transition-colors font-medium">Contact</a>
+            </nav>
+            <button class="md:hidden text-2xl" id="menuBtn">
+                <i class='bx bx-menu'></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <nav id="mobileMenu" class="hidden md:hidden mt-4 pt-4 border-t border-zinc-800">
+            <div class="flex flex-col gap-4">
+                <a href="#about" class="hover:text-cyan-400 transition-colors font-medium">About</a>
+                <a href="#expertise" class="hover:text-cyan-400 transition-colors font-medium">Expertise</a>
+                <a href="#skills" class="hover:text-cyan-400 transition-colors font-medium">Skills</a>
+                <a href="https://medium.com/@jpedromoco" target="_blank" class="hover:text-cyan-400 transition-colors font-medium flex items-center gap-2">
+                    Blog <i class='bx bx-link-external text-sm'></i>
+                </a>
+                <a href="#contact" class="hover:text-cyan-400 transition-colors font-medium">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center text-center px-4 pt-24 relative overflow-hidden">
+        <div class="hex-pattern absolute inset-0 opacity-5 z-0"></div>
+        <div class="absolute inset-0 z-0">
+            <div class="grid-overlay"></div>
+        </div>
+        <div class="max-w-5xl relative z-10">
+            <div class="inline-block mb-6" data-aos="fade-down">
+                <span class="px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-semibold tracking-wide">
+                    CYBER THREAT INTELLIGENCE
+                </span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight" data-aos="fade-up">
+                <span class="cyber-gradient">José Pedro Moco</span>
+            </h1>
+            <h2 class="text-2xl md:text-3xl text-zinc-300 mb-8 font-light" data-aos="fade-up" data-aos-delay="100">
+                Cyber Threat Intelligence Analyst
+            </h2>
+            <p class="text-lg md:text-xl text-zinc-400 mb-10 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                Specialized in identifying, analyzing, and neutralizing advanced cyber threats through strategic intelligence, OSINT, and adversary behavioral analysis.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up" data-aos-delay="300">
+                <a href="#expertise" class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-lg font-semibold transition-all flex items-center gap-2 shadow-lg shadow-cyan-500/20">
+                    <i class='bx bx-radar'></i> View Expertise
+                </a>
+                <a href="#contact" class="px-8 py-4 bg-zinc-800 hover:bg-zinc-700 text-white rounded-lg font-semibold transition-all border border-zinc-700 flex items-center gap-2">
+                    <i class='bx bx-envelope'></i> Get in Touch
+                </a>
+            </div>
+            <div class="flex justify-center gap-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="flex items-center gap-2 text-zinc-400">
+                    <i class='bx bx-world text-cyan-400'></i>
+                    <span class="text-sm">PT/EN</span>
+                </div>
+                <div class="w-px h-6 bg-zinc-700"></div>
+                <a href="https://www.linkedin.com/in/jpedromoco" target="_blank" class="flex items-center gap-2 text-zinc-400 hover:text-cyan-400 transition-colors">
+                    <i class='bx bxl-linkedin'></i>
+                    <span class="text-sm">LinkedIn</span>
+                </a>
+                <div class="w-px h-6 bg-zinc-700"></div>
+                <a href="https://medium.com/@jpedromoco" target="_blank" class="flex items-center gap-2 text-zinc-400 hover:text-cyan-400 transition-colors">
+                    <i class='bx bxl-medium'></i>
+                    <span class="text-sm">Medium</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-4 md:px-8 bg-zinc-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="cyber-gradient">About Me</span>
+                </h2>
+                <p class="text-zinc-400 text-lg max-w-2xl mx-auto">
+                    Transforming raw intelligence into actionable security insights
                 </p>
-                <div class="flex justify-center gap-4" data-aos="fade-up" data-aos-delay="400">
-                    <a href="#expertise" class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-semibold transition-all flex items-center gap-2">
-                        <i class='bx bx-shield'></i> Ver Especializações
-                    </a>
-                </div>
             </div>
-        </section>
 
-        <!-- Sobre -->
-        <section id="sobre" class="py-20 px-4 md:px-8 bg-zinc-800/50">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-4xl font-bold cyber-gradient mb-12 text-center" data-aos="fade-up">Sobre Minha Atuação</h2>
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="space-y-6" data-aos="fade-right">
-                        <p class="text-zinc-300 leading-relaxed">
-                            Analista de SOC com experiência em operações de segurança e resposta a incidentes em ambiente corporativo. Principais competências:
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <div class="space-y-6" data-aos="fade-right">
+                    <div class="prose prose-invert">
+                        <p class="text-zinc-300 leading-relaxed text-lg mb-6">
+                            As a <strong class="text-white">Cyber Threat Intelligence Analyst</strong>, I'm dedicated to proactive identification and in-depth analysis of cyber threats, developing actionable intelligence to defend organizations against persistent adversaries.
                         </p>
-                        <ul class="text-zinc-400 space-y-4">
-                            <li class="flex items-center gap-3">
-                                <i class='bx bx-check-shield text-blue-400'></i>
-                                Operações em SOC Tier 2/3
+                        <p class="text-zinc-400 leading-relaxed">
+                            My approach combines advanced OSINT techniques, malware behavioral analysis, and adversary profiling, enabling the anticipation of tactics, techniques, and procedures (TTPs) used by threat actors.
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-zinc-800 to-zinc-900 p-6 rounded-xl border border-zinc-700">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center gap-2">
+                            <i class='bx bx-target-lock text-cyan-400'></i>
+                            Core Focus
+                        </h3>
+                        <ul class="space-y-3 text-zinc-300">
+                            <li class="flex items-start gap-3">
+                                <i class='bx bx-check text-cyan-400 mt-1'></i>
+                                <span>Threat Actor Attribution & Campaign Tracking</span>
                             </li>
-                            <li class="flex items-center gap-3">
-                                <i class='bx bx-radar text-blue-400'></i>
-                                Análise Comportamental de Ameaças
+                            <li class="flex items-start gap-3">
+                                <i class='bx bx-check text-cyan-400 mt-1'></i>
+                                <span>Strategic & Tactical Intelligence Production</span>
                             </li>
-                            <li class="flex items-center gap-3">
-                                <i class='bx bx-error text-blue-400'></i>
-                                Resposta a Incidentes CSIRT
+                            <li class="flex items-start gap-3">
+                                <i class='bx bx-check text-cyan-400 mt-1'></i>
+                                <span>Advanced Persistent Threat (APT) Analysis</span>
                             </li>
-                            <li class="flex items-center gap-3">
-                                <i class='bx bx-bug text-blue-400'></i>
-                                Análise Forense de Malware
+                            <li class="flex items-start gap-3">
+                                <i class='bx bx-check text-cyan-400 mt-1'></i>
+                                <span>Threat Landscape Assessment & Reporting</span>
                             </li>
                         </ul>
                     </div>
-                    <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
-                        <div class="h-48 bg-zinc-700 rounded-lg p-4 flex flex-col items-center justify-center border border-zinc-600">
-                            <i class='bx bx-time-five text-4xl text-blue-400 mb-2'></i>
-                            <span class="text-center">MTTD Otimizado</span>
-                            <p class="text-sm text-zinc-400 mt-1">(Mean Time to Detect)</p>
-                        </div>
-                        <div class="h-48 bg-zinc-700 rounded-lg p-4 flex flex-col items-center justify-center border border-zinc-600">
-                            <i class='bx bx-line-chart-down text-4xl text-blue-400 mb-2'></i>
-                            <span class="text-center">Redução de MTTR</span>
-                            <p class="text-sm text-zinc-400 mt-1">(Mean Time to Respond)</p>
-                        </div>
-                    </div>
                 </div>
 
-                <!-- Seção CSIRT -->
-                <div class="mt-16 border-t border-zinc-700 pt-12" data-aos="fade-up">
-                    <div class="max-w-3xl mx-auto">
-                        <div class="flex items-center gap-4 mb-6">
-                            <i class='bx bx-first-aid text-4xl text-blue-400'></i>
-                            <h3 class="text-2xl font-semibold">CSIRT & Resposta a Incidentes</h3>
+                <div class="space-y-6" data-aos="fade-left">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-zinc-800 p-6 rounded-xl border border-zinc-700 hover:border-cyan-500/50 transition-all">
+                            <div class="text-3xl font-bold cyber-gradient mb-2">CTI</div>
+                            <p class="text-zinc-400 text-sm">Cyber Threat Intelligence</p>
                         </div>
-                        <div class="grid md:grid-cols-2 gap-8">
-                            <div class="space-y-4">
-                                <p class="text-zinc-300">
-                                    Atuação direta em casos de:
-                                </p>
-                                <ul class="text-zinc-400 space-y-2">
-                                    <li class="flex items-center gap-2">
-                                        <i class='bx bx-x text-red-400'></i>
-                                        Violações de Dados
-                                    </li>
-                                    <li class="flex items-center gap-2">
-                                        <i class='bx bx-lock-open text-red-400'></i>
-                                        Ataques Ransomware
-                                    </li>
-                                    <li class="flex items-center gap-2">
-                                        <i class='bx bx-network-chart text-red-400'></i>
-                                        Comprometimentos de Rede
-                                    </li>
-                                </ul>
+                        <div class="bg-zinc-800 p-6 rounded-xl border border-zinc-700 hover:border-cyan-500/50 transition-all">
+                            <div class="text-3xl font-bold cyber-gradient mb-2">OSINT</div>
+                            <p class="text-zinc-400 text-sm">Open Source Intelligence</p>
+                        </div>
+                        <div class="bg-zinc-800 p-6 rounded-xl border border-zinc-700 hover:border-cyan-500/50 transition-all">
+                            <div class="text-3xl font-bold cyber-gradient mb-2">TTP</div>
+                            <p class="text-zinc-400 text-sm">Tactics, Techniques & Procedures</p>
+                        </div>
+                        <div class="bg-zinc-800 p-6 rounded-xl border border-zinc-700 hover:border-cyan-500/50 transition-all">
+                            <div class="text-3xl font-bold cyber-gradient mb-2">IOC</div>
+                            <p class="text-zinc-400 text-sm">Indicators of Compromise</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-zinc-800 p-6 rounded-xl border border-zinc-700">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center gap-2">
+                            <i class='bx bx-world text-cyan-400'></i>
+                            Languages
+                        </h3>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-zinc-300">Portuguese</span>
+                                    <span class="text-zinc-500 text-sm">Native</span>
+                                </div>
+                                <div class="w-full bg-zinc-700 rounded-full h-2">
+                                    <div class="bg-gradient-to-r from-cyan-500 to-blue-600 h-2 rounded-full" style="width: 100%"></div>
+                                </div>
                             </div>
-                            <div class="space-y-4">
-                                <p class="text-zinc-300">
-                                    Metodologia de Resposta:
-                                </p>
-                                <ul class="text-zinc-400 space-y-2 list-decimal list-inside">
-                                    <li>Preparação e Prevenção</li>
-                                    <li>Identificação e Análise</li>
-                                    <li>Contenção e Erradicação</li>
-                                    <li>Recuperação Pós-Incidente</li>
-                                </ul>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-zinc-300">English</span>
+                                    <span class="text-zinc-500 text-sm">Professional</span>
+                                </div>
+                                <div class="w-full bg-zinc-700 rounded-full h-2">
+                                    <div class="bg-gradient-to-r from-cyan-500 to-blue-600 h-2 rounded-full" style="width: 90%"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Expertise -->
-        <section id="expertise" class="py-20 px-4 md:px-8 bg-zinc-900">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-4xl font-bold cyber-gradient mb-12 text-center" data-aos="fade-up">Áreas de Especialização</h2>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-zinc-800 p-6 rounded-xl border border-zinc-700 hover:border-blue-400 transition-colors" data-aos="zoom-in">
-                        <i class='bx bx-shield-quarter text-4xl text-blue-400 mb-4'></i>
-                        <h3 class="text-xl font-semibold mb-2">Operações de Segurança</h3>
-                        <ul class="text-zinc-400 text-sm space-y-2">
-                            <li>• Monitoramento SIEM</li>
-                            <li>• Triagem de Alertas</li>
-                            <li>• Resposta a Incidentes</li>
-                        </ul>
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-24 px-4 md:px-8 bg-zinc-800/30">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="cyber-gradient">Core Expertise</span>
+                </h2>
+                <p class="text-zinc-400 text-lg max-w-2xl mx-auto">
+                    Specialized capabilities in cyber threat intelligence and advanced security analysis
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- CTI -->
+                <div class="bg-gradient-to-br from-zinc-800 to-zinc-900 p-8 rounded-2xl border border-zinc-700 hover:border-cyan-500/50 transition-all group" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-600/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class='bx bx-brain text-3xl text-cyan-400'></i>
                     </div>
-                    <div class="bg-zinc-800 p-6 rounded-xl border border-zinc-700 hover:border-blue-400 transition-colors" data-aos="zoom-in">
-                        <i class='bx bx-search-alt text-4xl text-blue-400 mb-4'></i>
-                        <h3 class="text-xl font-semibold mb-2">Inteligência de Ameaças</h3>
-                        <ul class="text-zinc-400 text-sm space-y-2">
-                            <li>• Coleta de IOC's</li>
-                            <li>• Análise TTP's</li>
-                            <li>• Mapeamento de Ameaças</li>
-                        </ul>
+                    <h3 class="text-2xl font-bold mb-3">Cyber Threat Intelligence</h3>
+                    <p class="text-zinc-400 mb-4 text-sm leading-relaxed">
+                        Strategic and tactical threat analysis, production of intelligence reports and threat briefings for stakeholders.
+                    </p>
+                    <ul class="space-y-2 text-zinc-400 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i class='bx bx-chevron-right text-cyan-400 mt-0.5'></i>
+                            <span>Threat Intelligence Lifecycle</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class='bx bx-chevron-right text-cyan-400 mt-0.5'></i>
+                            <span>Strategic/Tactical CTI</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class='bx bx-chevron-right text-cyan-400 mt-0.5'></i>
+                            <span>Threat Actor Profiling</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class='bx bx-chevron-right text-cyan-400 mt-0.5'></i>
+                            <span>MITRE ATT&CK Mapping</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- OSINT -->
+                <div class="bg-gradient-to-br from-zinc-800 to-zinc-900 p-8 rounded-2xl border border-zinc-700 hover:border-cyan-500/50 transition-all group" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-600/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class='bx bx-search-alt-2 text-3xl text-cyan-400'></i>
                     </div>
-                    <div class="bg-zinc-800 p-6 rounded-xl border border-zinc-700 hover:border-blue-400 transition-colors" data-aos="zoom-in">
-                        <i class='bx bx-chip text-4xl text-blue-400 mb-4'></i>
-                        <h3 class="text-xl font-semibold mb-2">Análise de Malware</h3>
-                        <ul class="text-zinc-400 text-sm space-y-2">
-                            <li>• Análise Estática/Dinâmica</li>
-                            <li>• Engenharia Reversa</li>
-                            <li>• Análise em Sandbox</li>
-                        </ul>
+                    <h3 class="text-2xl font-bold mb-3">OSINT</h3>
+                    <p class="text-zinc-400 mb-4 text-sm leading-relaxed">
+                        Intelligence collection and analysis from open sources, dark web monitoring, and advanced digital investigations.
+                    </p>
+                    <ul class="space-y-2 text-zinc-400 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i class='bx bx-chevron-right text-cyan-400 mt-0.5'></i>
+                            <span>Dark Web Intelligence</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class='bx bx-chevron-right text-cyan-400 mt-0.5'></i>
+                            <span>Social Media Analysis</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class='bx bx-chevron-right text-cyan-400 mt-0.5'></i>
+                            <span>Data Breach Monitoring</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class='bx bx-chevron-right text-cyan-400 mt-0.5'></i>
+                            <span>Domain/IP Reconnaissance</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Malware Analysis -->
+                <div class="bg-gradient-to-br from-zinc-800 to-zinc-900 p-8 rounded-2xl border border-zinc-700 hover:border-cyan-500/50 transition-all group" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-600/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class='bx bx-bug text-3xl text-cyan-400'></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Malware Analysis</h3>
+                    <p class="text-zinc-400 mb-4 text-sm leading-relaxed">
+                        Behavioral and static malware analysis, reverse engineering, and IOC identification.
+                    </p>
+                    <ul class="space-y-2 text-zinc-400 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i class='bx bx-chevron-right text-cyan-400 mt-0.5'></i>
+                            <span>Static & Dynamic Analysis</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class='bx bx-chevron-right text-cyan-400 mt-0.5'></i>
+                            <span>Sandbox Detonation</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class='bx bx-chevron-right text-cyan-400 mt-0.5'></i>
+                            <span>Reverse Engineering</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class='bx bx-chevron-right text-cyan-400 mt-0.5'></i>
+                            <span>IOC Extraction</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Threat Hunting -->
+                <div class="bg-gradient-to-br from-zinc-800 to-zinc-900 p-8 rounded-2xl border border-zinc-700 hover:border-cyan-500/50 transition-all group" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-600/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class='bx bx-crosshair text-3xl text-cyan-400'></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Threat Hunting</h3>
+                    <p class="text-zinc-400 mb-4 text-sm leading-relaxed">
+                        Proactive threat hunting in corporate environments, identifying anomalies and malicious behaviors.
+                    </p>
+                    <ul class="space-y-2 text-zinc-400 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i class='bx bx-chevron-right text-cyan-400 mt-0.5'></i>
+                            <span>Hypothesis-Driven Hunting</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class='bx bx-chevron-right text-cyan-400 mt-0.5'></i>
+                            <span>Behavioral Analytics</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class='bx bx-chevron-right text-cyan-400 mt-0.5'></i>
+                            <span>Anomaly Detection</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class='bx bx-chevron-right text-cyan-400 mt-0.5'></i>
+                            <span>SIEM Query Development</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Adversary Profiling -->
+                <div class="bg-gradient-to-br from-zinc-800 to-zinc-900 p-8 rounded-2xl border border-zinc-700 hover:border-cyan-500/50 transition-all group" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-600/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class='bx bx-user-circle text-3xl text-cyan-400'></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Adversary Profiling</h3>
+                    <p class="text-zinc-400 mb-4 text-sm leading-relaxed">
+                        APT group characterization, malicious campaign analysis, and threat actor attribution.
+                    </p>
+                    <ul class="space-y-2 text-zinc-400 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i class='bx bx-chevron-right text-cyan-400 mt-0.5'></i>
+                            <span>APT Group Tracking</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class='bx bx-chevron-right text-cyan-400 mt-0.5'></i>
+                            <span>Campaign Analysis</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class='bx bx-chevron-right text-cyan-400 mt-0.5'></i>
+                            <span>Attribution Methodology</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class='bx bx-chevron-right text-cyan-400 mt-0.5'></i>
+                            <span>Motive & Capability Assessment</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Incident Response -->
+                <div class="bg-gradient-to-br from-zinc-800 to-zinc-900 p-8 rounded-2xl border border-zinc-700 hover:border-cyan-500/50 transition-all group" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-600/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class='bx bx-first-aid text-3xl text-cyan-400'></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Incident Response</h3>
+                    <p class="text-zinc-400 mb-4 text-sm leading-relaxed">
+                        Support for incident response operations with intelligence context and forensic analysis.
+                    </p>
+                    <ul class="space-y-2 text-zinc-400 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i class='bx bx-chevron-right text-cyan-400 mt-0.5'></i>
+                            <span>CTI-Driven Response</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class='bx bx-chevron-right text-cyan-400 mt-0.5'></i>
+                            <span>Digital Forensics</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class='bx bx-chevron-right text-cyan-400 mt-0.5'></i>
+                            <span>Root Cause Analysis</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class='bx bx-chevron-right text-cyan-400 mt-0.5'></i>
+                            <span>Post-Incident Reporting</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="py-24 px-4 md:px-8 bg-zinc-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="cyber-gradient">Technical Arsenal</span>
+                </h2>
+                <p class="text-zinc-400 text-lg">
+                    Tools, frameworks and platforms used in CTI operations
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Intelligence Platforms -->
+                <div class="bg-zinc-800 p-6 rounded-xl border border-zinc-700" data-aos="fade-up" data-aos-delay="0">
+                    <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+                        <i class='bx bx-data text-cyan-400'></i>
+                        Intelligence Platforms
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">MISP</span>
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">OpenCTI</span>
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">ThreatConnect</span>
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">Recorded Future</span>
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">VirusTotal</span>
+                    </div>
+                </div>
+
+                <!-- OSINT Tools -->
+                <div class="bg-zinc-800 p-6 rounded-xl border border-zinc-700" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+                        <i class='bx bx-search text-cyan-400'></i>
+                        OSINT Tools
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">Maltego</span>
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">Shodan</span>
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">Censys</span>
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">TheHarvester</span>
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">SpiderFoot</span>
+                    </div>
+                </div>
+
+                <!-- Malware Analysis -->
+                <div class="bg-zinc-800 p-6 rounded-xl border border-zinc-700" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+                        <i class='bx bx-bug-alt text-cyan-400'></i>
+                        Malware Analysis
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">IDA Pro</span>
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">Ghidra</span>
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">Cuckoo Sandbox</span>
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">ANY.RUN</span>
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">REMnux</span>
+                    </div>
+                </div>
+
+                <!-- SIEM & Detection -->
+                <div class="bg-zinc-800 p-6 rounded-xl border border-zinc-700" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+                        <i class='bx bx-radar text-cyan-400'></i>
+                        SIEM & Detection
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">Splunk</span>
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">Elastic Stack</span>
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">Sigma Rules</span>
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">YARA</span>
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">Suricata</span>
+                    </div>
+                </div>
+
+                <!-- Frameworks -->
+                <div class="bg-zinc-800 p-6 rounded-xl border border-zinc-700" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+                        <i class='bx bx-layer text-cyan-400'></i>
+                        Frameworks
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">MITRE ATT&CK</span>
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">Diamond Model</span>
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">Kill Chain</span>
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">STIX/TAXII</span>
+                    </div>
+                </div>
+
+                <!-- Programming -->
+                <div class="bg-zinc-800 p-6 rounded-xl border border-zinc-700" data-aos="fade-up" data-aos-delay="500">
+                    <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+                        <i class='bx bx-code-alt text-cyan-400'></i>
+                        Programming & Scripting
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">PowerShell</span>
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">Bash</span>
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">SQL</span>
+                        <span class="px-3 py-1 bg-zinc-700 rounded-full text-sm">Regex</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Contato -->
-        <section id="contato" class="py-20 px-4 md:px-8 bg-zinc-800/50">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-4xl font-bold cyber-gradient mb-12" data-aos="fade-up">Contato Profissional</h2>
-                <div class="grid md:grid-cols-2 gap-8 mb-12" data-aos="fade-up">
-                    <a href="https://www.linkedin.com/in/jpedromoco" target="_blank" class="p-6 bg-zinc-700 rounded-xl hover:bg-zinc-600 transition-colors">
-                        <i class='bx bxl-linkedin text-4xl text-blue-400 mb-4'></i>
-                        <h3 class="font-semibold mb-2">LinkedIn</h3>
-                        <p class="text-zinc-400 text-sm">Perfil Profissional</p>
-                    </a>
-                    <a href="mailto:jpedromoco@gmail.com" target="_blank" class="p-6 bg-zinc-700 rounded-xl hover:bg-zinc-600 transition-colors">
-                        <i class='bx bxs-envelope text-4xl text-blue-400 mb-4'></i>
-                        <h3 class="font-semibold mb-2">Email</h3>
-                        <p class="text-zinc-400 text-sm">jpedromoco@gmail.com</p>
-                    </a>
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-4 md:px-8 bg-zinc-900 relative overflow-hidden">
+        <div class="hex-pattern absolute inset-0 opacity-5"></div>
+        <div class="max-w-4xl mx-auto relative z-10">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="cyber-gradient">Let's Connect</span>
+                </h2>
+                <p class="text-zinc-400 text-lg">
+                    Open to discussing threat intelligence, collaboration opportunities, or cybersecurity insights
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <a href="https://www.linkedin.com/in/jpedromoco" target="_blank" 
+                   class="group bg-zinc-800 p-8 rounded-2xl border border-zinc-700 hover:border-cyan-500/50 transition-all hover:transform hover:scale-105" 
+                   data-aos="fade-right">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-14 h-14 rounded-xl bg-blue-600/20 flex items-center justify-center group-hover:bg-blue-600/30 transition-colors mb-4">
+                            <i class='bx bxl-linkedin text-3xl text-blue-400'></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">LinkedIn</h3>
+                        <p class="text-zinc-400 text-sm">Professional Network</p>
+                    </div>
+                </a>
+
+                <a href="https://medium.com/@jpedromoco" target="_blank" 
+                   class="group bg-zinc-800 p-8 rounded-2xl border border-zinc-700 hover:border-cyan-500/50 transition-all hover:transform hover:scale-105" 
+                   data-aos="fade-up">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-14 h-14 rounded-xl bg-green-600/20 flex items-center justify-center group-hover:bg-green-600/30 transition-colors mb-4">
+                            <i class='bx bxl-medium text-3xl text-green-400'></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Medium Blog</h3>
+                        <p class="text-zinc-400 text-sm">Technical Articles</p>
+                    </div>
+                </a>
+
+                <a href="mailto:jpedromoco@gmail.com" 
+                   class="group bg-zinc-800 p-8 rounded-2xl border border-zinc-700 hover:border-cyan-500/50 transition-all hover:transform hover:scale-105" 
+                   data-aos="fade-left">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-14 h-14 rounded-xl bg-cyan-600/20 flex items-center justify-center group-hover:bg-cyan-600/30 transition-colors mb-4">
+                            <i class='bx bx-envelope text-3xl text-cyan-400'></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Email</h3>
+                        <p class="text-zinc-400 text-sm break-all">jpedromoco@gmail.com</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="bg-gradient-to-r from-zinc-800 to-zinc-900 p-8 rounded-2xl border border-zinc-700 text-center" data-aos="fade-up">
+                <div class="flex flex-wrap justify-center gap-3 mb-4">
+                    <span class="px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm">
+                        Available for Consulting
+                    </span>
+                    <span class="px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm">
+                        Open to Collaboration
+                    </span>
                 </div>
+                <p class="text-zinc-400">
+                    Interested in Cyber Threat Intelligence, Threat Hunting, and Security Research projects
+                </p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <footer class="bg-zinc-900 py-8 text-center text-zinc-400 border-t border-zinc-800">
-            <div class="max-w-6xl mx-auto">
-                <p class="mb-4">© 2024 JP Moco | Especialista em Cibersegurança</p>
-                <p class="text-sm opacity-75">Protegendo ativos digitais com excelência operacional</p>
+    <!-- Footer -->
+    <footer class="bg-zinc-900 py-12 text-center border-t border-zinc-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-center items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
+                    <i class='bx bx-shield-quarter text-white text-xl'></i>
+                </div>
+                <span class="text-xl font-bold cyber-gradient">JP Moco</span>
             </div>
-        </footer>
+            
+            <p class="text-zinc-400 mb-4">
+                Cyber Threat Intelligence Analyst
+            </p>
+            
+            <div class="flex justify-center gap-6 mb-6">
+                <a href="https://www.linkedin.com/in/jpedromoco" target="_blank" 
+                   class="text-zinc-400 hover:text-cyan-400 transition-colors"
+                   aria-label="LinkedIn">
+                    <i class='bx bxl-linkedin text-2xl'></i>
+                </a>
+                <a href="https://medium.com/@jpedromoco" target="_blank" 
+                   class="text-zinc-400 hover:text-cyan-400 transition-colors"
+                   aria-label="Medium Blog">
+                    <i class='bx bxl-medium text-2xl'></i>
+                </a>
+                <a href="mailto:jpedromoco@gmail.com" 
+                   class="text-zinc-400 hover:text-cyan-400 transition-colors"
+                   aria-label="Email">
+                    <i class='bx bx-envelope text-2xl'></i>
+                </a>
+            </div>
+            
+            <div class="border-t border-zinc-800 pt-6">
+                <p class="text-zinc-500 text-sm">
+                    © 2025 José Pedro Moco. All rights reserved.
+                </p>
+                <p class="text-zinc-600 text-xs mt-2">
+                    Defending organizations through strategic threat intelligence
+                </p>
+            </div>
+        </div>
+    </footer>
 
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-        <script>
-           document.addEventListener('DOMContentLoaded', function() {
-              AOS.init({
-                  duration: 800,
-                  once: true,
-                  offset: 100,
-              });
-             });
-      </script>
-        </body>
-        </html>
+    <script>
+        // Initialize AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100,
+                easing: 'ease-in-out'
+            });
+
+            // Mobile menu toggle
+            const menuBtn = document.getElementById('menuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                // Close mobile menu when clicking on a link
+                const mobileLinks = mobileMenu.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
