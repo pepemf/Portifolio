@@ -1,0 +1,271 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+
+/* Root Variables */
+:root {
+    --color-yellow: #f4d03f;
+    /* Signal Yellow */
+    --color-black: #050505;
+    --color-white: #ffffff;
+    --color-gray: #1a1a1a;
+
+    --font-serif: 'Playfair Display', serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-mono);
+    background-color: var(--color-black);
+    color: var(--color-white);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-serif);
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.font-serif {
+    font-family: var(--font-serif);
+}
+
+.font-mono {
+    font-family: var(--font-mono);
+}
+
+/* Utilities */
+.text-yellow {
+    color: var(--color-yellow);
+}
+
+.bg-yellow {
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+}
+
+.border-yellow {
+    border: 1px solid var(--color-yellow);
+}
+
+/* Sticker / Label Style */
+.sticker {
+    display: inline-block;
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    padding: 0.25rem 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.sticker-outline {
+    display: inline-block;
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    padding: 0.25rem 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+/* Editorial Card */
+.editorial-card {
+    background-color: var(--color-gray);
+    border: 1px solid #333;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.editorial-card:hover {
+    border-color: var(--color-yellow);
+    transform: translateY(-5px);
+}
+
+.editorial-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: var(--color-yellow);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+    transform-origin: bottom;
+}
+
+.editorial-card:hover::before {
+    transform: scaleY(1);
+}
+
+/* Magazine Hero Layout */
+.magazine-hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+    border-bottom: 1px solid #333;
+}
+
+@media (min-width: 1024px) {
+    .magazine-hero {
+        grid-template-columns: 1.5fr 1fr;
+    }
+}
+
+.hero-content {
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid #333;
+}
+
+.hero-visual {
+    position: relative;
+    background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Noise Texture */
+.noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-black);
+    border-left: 1px solid #333;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border: 2px solid var(--color-black);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-yellow);
+}
+
+/* Navigation */
+.nav-link {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    color: #888;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--color-yellow);
+}
+
+/* Button Styles */
+.btn-editorial {
+    display: inline-block;
+    background: var(--color-white);
+    color: var(--color-black);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-editorial:hover {
+    background: var(--color-yellow);
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline {
+    display: inline-block;
+    background: transparent;
+    color: var(--color-white);
+    border: 1px solid var(--color-white);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
+/* Animations */
+@keyframes ticker {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.ticker-wrap {
+    width: 100%;
+    overflow: hidden;
+    background: var(--color-yellow);
+    color: var(--color-black);
+    padding: 0.5rem 0;
+    white-space: nowrap;
+}
+
+.ticker {
+    display: inline-block;
+    animation: ticker 30s linear infinite;
+}
+
+.ticker-item {
+    display: inline-block;
+    padding: 0 2rem;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+}
